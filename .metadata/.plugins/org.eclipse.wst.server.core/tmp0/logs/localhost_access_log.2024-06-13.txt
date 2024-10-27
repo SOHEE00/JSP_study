@@ -1,0 +1,12 @@
+127.0.0.1 - - [13/Jun/2024:21:52:56 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:52:58 +0900] "GET /JspStudy/ProjectFile/bootEx/bootMain.jsp HTTP/1.1" 200 10386
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:52:59 +0900] "GET /JspStudy/ProjectFile/bootEx/images/samsung.png HTTP/1.1" 404 870
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:52:59 +0900] "GET /JspStudy/ProjectFile/bootEx/images/kb.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:52:59 +0900] "GET /JspStudy/ProjectFile/bootEx/images/samsung.png HTTP/1.1" 404 870
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:53:00 +0900] "GET /favicon.ico HTTP/1.1" 404 819
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:53:02 +0900] "GET /JspStudy/ProjectFile/bootEx/bootRegisteger.jsp HTTP/1.1" 200 3997
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:53:53 +0900] "POST /JspStudy/ProjectFile/bootEx/bootRegisterProc.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:53:53 +0900] "GET /JspStudy/ProjectFile/bootEx/bootMain.jsp HTTP/1.1" 200 11087
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:53:53 +0900] "GET /JspStudy/ProjectFile/bootEx/images/samsung.png HTTP/1.1" 404 870
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:53:53 +0900] "GET /JspStudy/ProjectFile/bootEx/images/samsung.png HTTP/1.1" 404 870
+0:0:0:0:0:0:0:1 - - [13/Jun/2024:21:55:43 +0900] "GET /JspStudy/ProjectFile/bootEx/bootMain2.jsp?search_username=kb HTTP/1.1" 200 7848

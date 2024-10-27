@@ -1,0 +1,61 @@
+<%@page import="joblistDb.joblistDao"%>
+<%@page import="joblistDb.joblistDo"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>search.jsp</h2>
+	<p> 회사이름: <%=request.getParameter("search_username") %> </p>
+	
+	<jsp:useBean id="jdao" class="joblistDb.joblistDao" />
+	<%-- <%
+		//num을 이용해서 해당 디비 데이터 삭제
+		String search_username = request.getParameter("search_username");
+		request.setAttribute("search_username",search_username);
+		
+		joblistDao jdo = new joblistDao();
+		
+		
+		ArrayList<joblistDo> searchResults = jdao.JoblistSelect(search_username);
+		//삭제 후 메인페이지 이동
+		response.sendRedirect("bootMain.jsp");
+	%>
+	<%=search_username %> --%>
+	 <%
+	     String search_username = request.getParameter("search_username");
+	     joblistDao dao = new joblistDao();
+	     ArrayList<joblistDo> searchResults = dao.JoblistSelect(search_username);
+		
+     if (searchResults != null && !searchResults.isEmpty()) {
+         for (joblistDo joblist : searchResults) {
+%>
+            <div class="col">
+                <div class="card" style="width: 20rem; margin:auto;">
+                    <!-- 카드의 사진 -->
+                    <img src="./images/<%= joblist.getImage() %>" class="card-img-top" alt="..." style="height:5rem; width:5rem; margin-left:10px;">
+                    <!-- 카드의 내용 -->
+                    <div class="card-body">
+                        <h5 class="card-title">이름 : <%= joblist.getUsername() %></h5>
+                        <h5 class="card-title">전화번호 : <%= joblist.getDate() %></h5>
+                        <h5 class="card-title">이메일 : <%= joblist.getPeople() %></h5>
+                        <h5 class="card-title">취미 : <%= joblist.getEmployee() %></h5>
+                        <a href="#" class="btn btn-primary">수정</a>
+                        <a href="#" class="btn btn-primary">삭제</a>
+                    </div>
+                </div>
+            </div>
+<%
+        }
+    } else {
+        out.println("<p>No results found.</p>");
+    }
+%>
+
+</body>
+</html>
